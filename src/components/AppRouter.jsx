@@ -15,13 +15,14 @@ import People from "../pages/people";
 import MyPeople from "../pages/myPeople";
 import Registerpage from "../pages/Registerpage";
 import ResetPasswordPage from "../pages/ResetPasswordPage";
+import Dashboard from "../pages/dashboard";
 
 export default function AppRouter(props) {
   return (
     <>
       <Router>
         <Switch>
-          <Route exact path="/" component={Loginpage} />
+          <Route exact path="/" component={Dashboard} />
           <ProtectedRoute exact path="/login" component={Loginpage} />
           <ProtectedRoute exact path="/register" component={Registerpage} />
           <ProtectedRoute exact path="/people" component={People} />
@@ -68,7 +69,7 @@ function ProtectedRoute(props) {
   ) : (
     <Redirect
       to={{
-        pathname: "/login",
+        pathname: "/",
         state: { from: path },
       }}
     />

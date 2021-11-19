@@ -16,6 +16,8 @@ import { Card } from "../components/Card";
 import DividerWithText from "../components/DividerWithText";
 import { Layout } from "../components/Layout";
 import { useAuth } from "../contexts/AuthContext";
+// import firebase from "firebase/compat/app";
+// import "firebase/compat/firestore";
 
 export default function Registerpage() {
   const history = useHistory();
@@ -26,6 +28,16 @@ export default function Registerpage() {
   const toast = useToast();
   const mounted = useRef(false);
 
+  // const addUser = (e) => {
+  //   e.preventDefault();
+  //   const db = firebase.firestore();
+  //   db.settings({
+  //     timestampsInSnapshots: true,
+  //   });
+  //   const userRef = db.collection("users").add({
+  //     email: this.state.email,
+  //   });
+  // };
   useEffect(() => {
     mounted.current = true;
     return () => {
@@ -98,6 +110,7 @@ export default function Registerpage() {
               size="lg"
               fontSize="md"
               isLoading={isSubmitting}
+              // onClick={addUser}
             >
               Sign up
             </Button>

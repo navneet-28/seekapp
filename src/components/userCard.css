@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin&family=Montagu+Slab:wght@300&display=swap");
+.cardtext {
+  font-family: "Montagu Slab", serif;
+}
+.image {
+  border-radius: 50%;
+}
+.font-bold {
+  font-weight: bold;
+}
